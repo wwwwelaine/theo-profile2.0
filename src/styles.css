@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Franklin:wght@700;800&family=Special+Elite&display=swap');
+
+:root { --ink:#15255d; --blue:#1f2f83; --paper:#edf1fa; --card:#e1e5ef; --cream:#f4f0e5; --line:rgba(21,37,93,.25); --shadow:0 22px 55px rgba(32,47,93,.16); font-family:"DM Sans",sans-serif; color:var(--ink); background:var(--paper); }
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-width:320px;min-height:100vh;-webkit-font-smoothing:antialiased;background:var(--paper)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.26;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.15'/%3E%3C/svg%3E")}
+button,input,textarea{font:inherit}button,a{color:inherit}button{cursor:pointer}.page-section{min-height:100vh;padding:110px max(7vw,48px);position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden}.brand{position:fixed;z-index:40;top:22px;left:4vw;font:800 26px "Libre Franklin";letter-spacing:-1.5px}.brand span{color:#8795dc}.eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:.18em;font-weight:700;color:#52629a}.section-heading h2,.contact h2{font:800 clamp(42px,6vw,82px)/.96 "Libre Franklin";letter-spacing:-.055em;margin:12px 0}.section-heading p{color:#66708f}.centered{text-align:center}.dock{position:fixed;z-index:40;left:50%;bottom:24px;transform:translateX(-50%);display:flex;gap:4px;padding:8px;background:rgba(248,250,255,.82);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.8);border-radius:20px;box-shadow:0 16px 40px rgba(35,49,91,.18)}.dock a{width:52px;height:48px;border-radius:13px;display:grid;place-items:center;text-decoration:none;position:relative}.dock svg{width:21px;height:21px}.dock a.active{background:var(--ink);color:white}.dock span{position:absolute;bottom:58px;background:var(--ink);color:#fff;padding:5px 8px;border-radius:6px;font-size:11px;opacity:0;transform:translateY(4px);pointer-events:none;transition:.2s}.dock a:hover span{opacity:1;transform:none}
+.hero{display:grid;grid-template-columns:1.16fr .84fr;align-items:center;padding-top:300px;min-height:1160px}.opening-sketch{position:absolute;z-index:0;top:35px;left:50%;width:310px;height:300px;object-fit:contain;object-position:center;transform:translateX(-50%);mix-blend-mode:multiply;opacity:.92;pointer-events:none}.hero-copy{max-width:720px;margin-left:1vw;position:relative;z-index:2}.hero h1{font:700 clamp(42px,4.7vw,68px)/.95 "Libre Franklin";letter-spacing:-.055em;margin:12px 0}.hero h1>span:first-of-type{font-size:.72em;letter-spacing:-.035em}.hero h2{font-size:clamp(20px,2vw,28px);margin:0 0 16px;text-transform:capitalize}.intro-copy{max-width:700px}.hero p{font-size:14px;line-height:1.55;margin:0 0 10px;color:#445071}.typed{animation:blink 1s steps(1) infinite}.socials{display:flex;gap:12px;margin-top:20px}.socials a{width:44px;height:44px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:9px;transition:.2s}.socials a:hover{background:var(--ink);color:white;transform:translateY(-3px)}.hanging-photo{height:520px;position:relative;transform:translateY(-50px);display:flex;flex-direction:column;justify-content:center;align-items:center;perspective:1200px}.strap{position:absolute;top:-15%;width:28px;height:40%;background:#111;box-shadow:0 4px 0 #000}.hook{position:absolute;top:22%;width:22px;height:46px;border:8px solid #111;border-top:0;border-radius:0 0 18px 18px}.id-flip{position:relative;width:min(250px,72%);aspect-ratio:3/4.2;border:0;padding:0;background:transparent;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.2,.75,.2,1);animation:sway 5s ease-in-out infinite;transform-origin:50% -30px}.id-flip.flipped{transform:rotateY(180deg)}.id-card-face{position:absolute;inset:0;padding:16px 16px 42px;background:#f7f4ef;box-shadow:var(--shadow);backface-visibility:hidden;display:flex;flex-direction:column}.id-card-face img{width:100%;height:100%;min-height:0;display:block;object-fit:cover;filter:saturate(.82) contrast(.96)}.id-card-face small{font:10px "Special Elite";margin:auto 0 0;padding-top:12px;text-align:center}.id-back{transform:rotateY(180deg)}.flip-hint{margin-top:13px;font:11px "Special Elite";letter-spacing:.05em}.scroll-cue{position:absolute;bottom:82px;left:50%;display:flex;align-items:center;gap:8px;font-size:12px;text-decoration:none;transform:translateX(-50%)}
+.portfolio-word{position:absolute;z-index:1;top:92px;left:50%;width:min(920px,75vw);height:390px;transform:translateX(-50%);font:800 clamp(72px,8.3vw,132px)/.75 "Libre Franklin";color:#111;pointer-events:none}.portfolio-word span{--x:0px;--y:0px;--r:0deg;position:absolute;left:50%;top:50%;display:block;letter-spacing:-.12em;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));transform-origin:center;transition:color .18s ease,transform .22s cubic-bezier(.2,.8,.2,1);cursor:default;pointer-events:auto}.portfolio-word span:hover{color:#3566d6;transform:translate(calc(-50% + var(--x)),calc(-58% + var(--y))) rotate(calc(var(--r) - 4deg)) scale(1.06)}.portfolio-word span:nth-child(1){--x:-360px;--y:76px;--r:17deg;color:#294b9b}.portfolio-word span:nth-child(2){--x:-268px;--y:119px;--r:18deg;color:#294b9b}.portfolio-word span:nth-child(3){--x:-182px;--y:-34px;--r:-6deg}.portfolio-word span:nth-child(4){--x:-72px;--y:-92px;--r:0deg}.portfolio-word span:nth-child(5){--x:22px;--y:-24px;--r:8deg}.portfolio-word span:nth-child(6){--x:116px;--y:20px;--r:12deg}.portfolio-word span:nth-child(7){--x:205px;--y:12px;--r:2deg}.portfolio-word span:nth-child(8){--x:273px;--y:65px;--r:11deg}.portfolio-word span:nth-child(9){--x:342px;--y:105px;--r:18deg}.portfolio-word sup{position:absolute;left:calc(50% + 165px);top:5px;color:#3566d6;font-size:40px;line-height:1;letter-spacing:0}.id-info{background:var(--ink);color:#f4f0e5;align-items:flex-start;text-align:left;padding:24px}.id-info small{margin:0 0 34px;padding:0;color:#b7c3eb}.id-info b{font:800 30px/.9 "Libre Franklin";letter-spacing:-.04em;margin-bottom:18px}.id-info span{font-size:11px;letter-spacing:.08em;border-top:1px solid rgba(255,255,255,.25);width:100%;padding:10px 0}.id-info i{font:10px "Special Elite";margin-top:auto;color:#b7c3eb}
+.about{background:rgba(255,255,255,.18);display:grid;grid-template-columns:1fr 1fr;gap:6vw 10vw;align-items:center}.about-grid>p{font-size:clamp(22px,2.5vw,35px);line-height:1.45;letter-spacing:-.025em}.facts{display:flex;flex-direction:column;gap:14px;margin-top:32px}.facts span{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line)}.ticker-strip{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 24px;border-block:1px solid var(--line);font-size:11px;letter-spacing:.12em;white-space:nowrap;overflow:hidden}.ticker-strip b{color:#50619d}.ticker-strip svg{color:#2d8f69;flex:none}
+.moments{min-height:auto;padding-block:130px}.moment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}.moment-card{border:0;text-align:left;padding:0;background:var(--card);box-shadow:0 14px 38px rgba(35,49,91,.1);border-radius:14px;overflow:hidden;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .55s ease,box-shadow .3s;position:relative}.moment-card.is-visible:hover{transform:translateY(-9px) rotate(-.3deg);box-shadow:var(--shadow)}.moment-card img{width:100%;height:230px;object-fit:cover}.moment-card>div:not(.award-mark){padding:26px}.moment-card span{font-size:11px;text-transform:uppercase;letter-spacing:.12em}.moment-card h3{font:800 24px "Libre Franklin";margin:8px 0}.moment-card p{line-height:1.55;color:#59627c}.moment-card b{display:flex;align-items:center;gap:8px;font-size:13px;margin-top:18px}.award-mark{position:absolute;z-index:2;top:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(247,249,255,.9);backdrop-filter:blur(8px);padding:8px 10px;border-radius:999px;box-shadow:0 5px 16px rgba(21,37,93,.14)}.award-mark svg{width:19px;height:19px}.award-mark span{font-weight:800}
+.pop-card,.reveal-block,.bounce-group{opacity:0;transform:translateY(150px) scale(.78);transition-delay:var(--delay,0ms)}.pop-card.is-visible,.reveal-block.is-visible{opacity:1;transform:translateY(0) scale(1)}.bounce-group.is-visible{opacity:1;animation:wholeDeckBounce 1.05s cubic-bezier(.18,.88,.24,1.25) both}
+.experience{min-height:auto;padding-block:140px}.experience-entry{width:min(1100px,100%);margin:58px auto 0;display:grid;grid-template-columns:210px 1fr;gap:58px;padding:52px;border-block:1px solid var(--line)}.experience-date{display:flex;flex-direction:column;padding-top:8px}.experience-date span{font-size:12px;letter-spacing:.2em}.experience-date b{font:800 58px "Libre Franklin";letter-spacing:-.06em}.experience-date i{font-size:12px;color:#66708f}.experience-content h3{font:800 clamp(30px,4vw,54px)/1 "Libre Franklin";letter-spacing:-.045em;color:#3566d6;margin:12px 0}.experience-content h3 small{font-size:.5em}.experience-content h4{font-size:18px;margin:0 0 12px}.admission-note{color:#59627c;line-height:1.6}.experience-content ul{columns:2;column-gap:42px;margin:28px 0 0;padding-left:20px}.experience-content li{break-inside:avoid;margin:0 0 12px;line-height:1.45;font-size:13px}
+.wins-section{min-height:auto;padding-block:130px}.wins-rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:48px max(3vw,20px) 30px;scrollbar-width:thin}.win-card{flex:0 0 300px;scroll-snap-align:start;min-height:230px;background:rgba(255,255,255,.7);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(21,37,93,.09);display:flex;flex-direction:column}.win-medal{display:flex;align-items:center;justify-content:space-between}.win-medal svg{width:26px;height:26px}.win-medal span{font-size:11px;letter-spacing:.18em}.win-card h3{font:800 20px/1.15 "Libre Franklin";margin:32px 0 10px}.win-card b{color:#3566d6;font-size:13px}.win-card small{margin-top:auto;color:#7b849e;font-size:10px;letter-spacing:.1em}
+.projects-section{min-height:auto;padding-block:140px}.project-filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:32px 0 70px}.project-filters button{border:1.5px solid var(--ink);background:transparent;border-radius:999px;padding:9px 18px}.project-filters button.active{background:var(--ink);color:#fff}.project-stage{position:relative}.kinetic-name{position:absolute;right:0;top:-48px;width:0;overflow:hidden;white-space:nowrap;border-right:3px solid #3566d6;font:800 22px "Libre Franklin";color:#3566d6;animation:typeName 1.15s steps(14,end) forwards,caretBlink .7s steps(1) infinite}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.project-grid.deck-0{animation-name:wholeDeckBounce}.project-grid.deck-1{animation-name:wholeDeckBounceAlt}.project-card{border:0;text-align:left;padding:0;background:var(--card);box-shadow:0 14px 38px rgba(35,49,91,.1);border-radius:14px;overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}.project-card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}.project-card>img,.project-image-slot{width:100%;height:230px;object-fit:cover}.project-image-slot{display:grid;place-items:center;align-content:center;gap:8px;background:#d7ddea;color:#6d7897}.project-image-slot svg{width:42px;height:42px}.project-image-slot span{font-size:10px;letter-spacing:.18em}.project-card>div:last-child{padding:26px}.project-card>div>span{font-size:10px;letter-spacing:.13em;text-transform:uppercase}.project-card h3{font:800 24px/1.05 "Libre Franklin";margin:9px 0}.project-card p{line-height:1.5;color:#59627c}.project-card b{display:flex;align-items:center;gap:8px;font-size:12px;margin-top:18px}
+.skills-section{min-height:75vh}.skills-window{width:100%;overflow-x:auto;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);padding:48px 0;scrollbar-width:thin}.skills-track{display:flex;width:max-content;gap:18px;animation:skillsMarquee 30s linear infinite}.skill-pill{width:190px;height:145px;flex:none;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}.skill-pill svg{width:34px;height:34px}.skill-pill span{font-size:13px;font-weight:700;text-align:center}
+.travel{min-height:900px}.city-map{width:min(1180px,100%);margin:48px auto 0;position:relative;border:1px solid rgba(21,37,93,.08);border-radius:24px;overflow:hidden;background:#f7f4ed;box-shadow:var(--shadow);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.city-map>img{display:block;width:100%;aspect-ratio:16/8.8;object-fit:cover;mix-blend-mode:multiply}.city-note{position:absolute;display:flex;flex-direction:column;gap:4px;background:rgba(247,249,255,.88);backdrop-filter:blur(12px);border:1px solid rgba(21,37,93,.12);padding:13px 16px;border-radius:12px;box-shadow:0 8px 22px rgba(21,37,93,.12)}.city-note b{font:800 15px "Libre Franklin"}.city-note span{font-size:11px;color:#64708e}.shanghai-note{left:5%;bottom:7%}.taiwan-note{right:5%;bottom:7%}
+.playlist{min-height:100vh}.market-layout{margin-top:34px}.record-card{display:grid;grid-template-columns:180px 1fr;align-items:center;gap:34px;padding:38px;background:rgba(255,255,255,.68);border-radius:14px;box-shadow:var(--shadow);max-width:900px;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1)}.vinyl{width:150px;height:150px;border-radius:50%;background:#111e42;display:grid;place-items:center;box-shadow:0 18px 24px rgba(0,0,0,.2)}.market-disc svg{width:58px;height:58px;color:#edf1fa}.playing .vinyl{animation:spin 4s linear infinite}.record-card h3{font:800 28px "Libre Franklin";margin:6px 0}.record-card p{color:#59627c}.record-card button,.contact form button{border:0;background:var(--blue);color:white;border-radius:999px;padding:12px 18px;font-weight:700;display:inline-flex;align-items:center;gap:8px}.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.focus-card{position:relative;padding:26px;border:1px solid var(--line);background:rgba(244,247,255,.64);border-radius:14px;transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1);transition-delay:var(--delay,0ms)}.focus-card>svg{width:30px;height:30px}.focus-card>span{position:absolute;right:20px;top:20px;font-size:11px;letter-spacing:.12em}.focus-card h3{font:800 20px "Libre Franklin";margin:30px 0 8px}.focus-card p{font-size:13px;line-height:1.55;color:#59627c}
+.message{align-items:center}.typewriter-wrap{width:min(820px,100%)}.typewriter-wrap>h2{font:800 clamp(28px,4vw,48px) "Libre Franklin"}.typewriter{padding:22px;border-radius:20px;background:#111e42;box-shadow:var(--shadow);position:relative}.typewriter textarea{width:100%;min-height:125px;resize:none;padding:22px;background:repeating-linear-gradient(#f5f0e4 0 28px,#d9d4c7 29px 30px);border:0;border-radius:6px;font:20px/30px "Special Elite";color:#253050}.counter{position:absolute;right:40px;top:122px;font:12px "Special Elite";color:#8c8c8c}.keybed{padding:26px 12px 12px;background:#3c5574;border-radius:12px;margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.keybed button{width:44px;height:44px;border-radius:50%;border:0;background:var(--cream);font:11px "Special Elite";box-shadow:0 5px 0 #a7a59f}.keybed button:active{transform:translateY(4px);box-shadow:0 1px 0 #a7a59f}.keybed button.space{width:230px;border-radius:999px}.pass{position:absolute;left:50%;bottom:-65px;transform:translateX(-50%);border:0;border-radius:999px;background:#385ac1;color:white;padding:13px 28px;display:flex;gap:8px;align-items:center}.toast{position:fixed;z-index:80;left:50%;bottom:100px;transform:translateX(-50%);background:var(--ink);color:white;border-radius:999px;padding:13px 22px;box-shadow:var(--shadow);animation:toast .3s ease}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.contact form{display:grid;gap:16px}.contact input,.contact textarea{width:100%;padding:18px;border:1.5px solid var(--ink);background:rgba(255,255,255,.18);color:var(--ink);border-radius:2px}.contact textarea{min-height:130px;resize:vertical}.contact form button{width:max-content;border-radius:3px;padding:16px 24px}.contact h2{font-size:clamp(48px,6.3vw,90px)}.contact>div>p{max-width:520px;line-height:1.6;color:#59627c}.mail{display:inline-block;margin-top:18px;font-weight:700}footer{padding:40px max(7vw,48px) 110px;display:flex;justify-content:space-between;border-top:1px solid var(--line);font-size:12px}footer a{text-decoration:none;font-weight:700}
+.modal-open{overflow:hidden}.modal-backdrop{position:fixed;z-index:70;inset:0;background:rgba(10,18,48,.62);backdrop-filter:blur(10px);display:grid;place-items:center;padding:24px;animation:fade .25s ease}.modal{width:min(880px,95vw);max-height:88vh;overflow:auto;background:var(--paper);border-radius:18px;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 35px 100px rgba(0,0,0,.35);position:relative;animation:modal .35s cubic-bezier(.2,.8,.2,1)}.modal>img,.modal-placeholder{width:100%;height:100%;min-height:520px;object-fit:cover}.modal-placeholder{display:grid;place-items:center;align-content:center;gap:12px;background:#d8deec}.modal-placeholder svg{width:54px;height:54px}.modal-placeholder span{font-size:11px;letter-spacing:.14em}.modal-copy{padding:58px 48px;display:flex;flex-direction:column;justify-content:center}.modal-copy h2{font:800 46px/1 "Libre Franklin";letter-spacing:-.04em;margin:12px 0}.modal-copy p{line-height:1.7;color:#535f80}.modal-date{font-size:12px;text-transform:uppercase;letter-spacing:.12em}.modal-close{position:absolute;right:16px;top:16px;width:42px;height:42px;border:0;border-radius:50%;background:white;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.14);z-index:3}.video-modal{width:min(980px,95vw);max-height:92vh;overflow:auto;background:var(--paper);border-radius:18px;box-shadow:0 35px 100px rgba(0,0,0,.4);position:relative;padding:32px;animation:modal .4s cubic-bezier(.2,.8,.2,1)}.video-heading{padding:8px 60px 22px 4px}.video-heading h2{font:800 clamp(28px,4vw,48px) "Libre Franklin";letter-spacing:-.04em;margin:8px 0}.video-modal video{display:block;width:100%;max-height:68vh;background:#050812;border-radius:12px}
+@keyframes blink{50%{opacity:0}}@keyframes sway{0%,100%{rotate:1.4deg}50%{rotate:-1.4deg}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes fade{from{opacity:0}}@keyframes modal{from{opacity:0;transform:scale(.9) translateY(20px)}}@keyframes toast{from{opacity:0;transform:translate(-50%,12px)}}@keyframes wholeDeckBounce{0%{opacity:0;transform:translateY(190px) scale(.62) rotate(4deg)}58%{opacity:1;transform:translateY(-34px) scale(1.07) rotate(-1deg)}76%{transform:translateY(16px) scale(.98)}90%{transform:translateY(-7px) scale(1.015)}100%{opacity:1;transform:none}}@keyframes wholeDeckBounceAlt{0%{opacity:0;transform:translateY(210px) scale(.58) rotate(-4deg)}55%{opacity:1;transform:translateY(-38px) scale(1.08) rotate(1deg)}75%{transform:translateY(18px) scale(.975)}90%{transform:translateY(-7px) scale(1.015)}100%{opacity:1;transform:none}}@keyframes typeName{to{width:185px}}@keyframes caretBlink{50%{border-color:transparent}}@keyframes skillsMarquee{to{transform:translateX(calc(-50% - 9px))}}
+@media(max-width:850px){.page-section{padding:95px 24px;min-height:auto}.brand{left:24px;font-size:21px}.hero{grid-template-columns:1fr;min-height:100vh;padding-top:430px}.portfolio-word{top:112px;width:700px;height:330px;font-size:76px;transform:translateX(-50%) scale(.72)}.opening-sketch{top:74px;width:310px;height:330px}.hero-copy{margin:0}.hero h1>span:first-of-type{font-size:.64em}.hero p{font-size:13px}.hanging-photo{height:610px;transform:none}.scroll-cue{display:none}.about,.contact{grid-template-columns:1fr;gap:40px}.ticker-strip{margin-top:10px;justify-content:flex-start}.experience-entry{grid-template-columns:1fr;gap:24px;padding:34px 8px}.experience-content ul{columns:1}.wins-rail{margin-inline:-24px;padding-inline:24px}.project-grid{grid-template-columns:1fr}.kinetic-name{right:0}.project-card{display:grid;grid-template-columns:42% 1fr}.project-card>img,.project-image-slot{height:100%;min-height:250px}.project-card>div:last-child{padding:22px}.skills-window{margin-inline:-24px;width:calc(100% + 48px);padding-inline:24px}.travel{min-height:700px}.city-map{margin-top:32px}.city-note{position:static;margin:12px;display:inline-flex;width:calc(50% - 27px)}.city-map>img{aspect-ratio:16/10;object-fit:cover}.record-card{grid-template-columns:1fr;text-align:center}.vinyl{margin:auto}.focus-grid{grid-template-columns:1fr}.modal{grid-template-columns:1fr}.modal>img,.modal-placeholder{height:280px;min-height:0}.modal-copy{padding:34px 28px}.modal-copy h2{font-size:36px}.video-modal{padding:18px}.dock{bottom:12px}.dock a{width:44px}.keybed button{width:35px;height:35px}.keybed button.space{width:180px}footer{padding-inline:24px}.contact h2{font-size:48px}}
+@media(max-width:560px){.dock a{width:39px;height:42px}.dock{gap:0;padding:5px}.hero{padding-top:410px}.portfolio-word{top:128px;transform:translateX(-50%) scale(.48)}.opening-sketch{top:70px;width:280px;height:310px}.hero h1{font-size:48px}.project-card{display:block}.project-card>img,.project-image-slot{height:220px}.city-map>img{aspect-ratio:4/3}.city-note{display:flex;width:auto}.typewriter{padding:12px}.keybed{gap:6px;padding:18px 5px 10px}.keybed button{width:29px;height:29px;font-size:9px;box-shadow:0 3px 0 #a7a59f}.contact{padding-bottom:140px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* 1. Magazine-cover hero lettering. */
+.hero{position:relative;width:100%;height:max(100vh,1160px);overflow:hidden}
+.opening-sketch{z-index:2}
+.portfolio-word{position:absolute;inset:0;width:100%;height:100vh;transform:none;pointer-events:none;z-index:1}
+.portfolio-word .portfolio-char{position:absolute;left:auto;top:auto;font-size:var(--size);color:var(--color,#101010);line-height:.75;letter-spacing:-.12em;transform:rotate(var(--rotation));transform-origin:center;pointer-events:auto;transition:color .2s ease,transform .25s cubic-bezier(.25,.8,.25,1)}
+.portfolio-word .portfolio-char:hover{color:#3566d6;transform:rotate(var(--rotation)) translateY(-8px) scale(1.06)}
+.portfolio-word .char-p{--size:12vw;--rotation:-15deg;--color:#294b9b;left:17%;top:25%}
+.portfolio-word .char-o1{--size:8.5vw;--rotation:17deg;--color:#294b9b;left:27%;top:42%}
+.portfolio-word .char-r{--size:10.5vw;--rotation:-7deg;left:31%;top:14%}
+.portfolio-word .char-t{--size:11.5vw;--rotation:1deg;left:43%;top:7%}
+.portfolio-word .char-f{--size:9.5vw;--rotation:9deg;left:57%;top:10%}
+.portfolio-word .char-o2{--size:10vw;--rotation:12deg;left:65%;top:20%}
+.portfolio-word .char-l{--size:10.5vw;--rotation:3deg;left:75%;top:29%}
+.portfolio-word .char-i{--size:8vw;--rotation:12deg;left:82%;top:43%}
+.portfolio-word .char-o3{--size:9vw;--rotation:18deg;left:86%;top:56%}
+.portfolio-word sup{left:72%;top:7%;font-size:3vw}
+
+/* 2. Damped lanyard physics: one entrance swing, then still. */
+.pop-card,.reveal-block,.bounce-group,.pop-card.is-visible,.reveal-block.is-visible,.bounce-group.is-visible{opacity:1;transform:none;animation:none;transition:none}
+.badge-container{transform-origin:top center;animation:badgeEntranceSwing 2.5s cubic-bezier(.25,1,.5,1) forwards;will-change:transform}
+.badge-container:hover{animation:badgeHoverSwing 1.2s ease-in-out infinite alternate}
+.id-flip{animation:none}
+@keyframes badgeEntranceSwing{0%{transform:translateY(-50px) rotate(25deg)}20%{transform:translateY(-50px) rotate(-18deg)}40%{transform:translateY(-50px) rotate(12deg)}60%{transform:translateY(-50px) rotate(-6deg)}80%{transform:translateY(-50px) rotate(2deg)}100%{transform:translateY(-50px) rotate(0deg)}}
+@keyframes badgeHoverSwing{0%{transform:translateY(-50px) rotate(-3deg)}100%{transform:translateY(-50px) rotate(3deg)}}
+
+/* 3. One-line, touch-friendly horizontal project filters. */
+.filter-container{display:flex;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;padding:10px 20px;margin:32px auto 70px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filter-container::-webkit-scrollbar{display:none}
+.filter-container button{flex:0 0 auto;white-space:nowrap}
+.project-grid{animation:none!important}
+.kinetic-name{display:none}
+.project-card:hover{transform:translateY(-6px)}
+.project-card p{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-line}
+.modal-copy p:last-child{white-space:pre-line}
+
+/* 4. Dual marquees always run; only the hovered card scales. */
+.skills-window{overflow:hidden;display:grid;gap:18px;scrollbar-width:none;padding-block:56px}
+.marquee-track{display:flex;animation:skillsMarquee 30s linear infinite;animation-play-state:running!important;will-change:transform}
+.marquee-track.reverse{animation-name:skillsMarqueeReverse;transform:translateX(calc(-50% - 9px))}
+.skill-card{height:130px;position:relative;transition:transform .3s cubic-bezier(.25,.8,.25,1),box-shadow .3s ease}
+.skill-card:hover{transform:scale(1.08);z-index:10;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+@keyframes skillsMarqueeReverse{from{transform:translateX(calc(-50% - 9px))}to{transform:translateX(0)}}
+
+@media(max-width:850px){
+  .hero{height:auto;min-height:100vh}
+  .portfolio-word{height:390px}
+  .portfolio-word .char-p{--size:20vw;left:3%;top:33%}.portfolio-word .char-o1{--size:15vw;left:15%;top:53%}.portfolio-word .char-r{--size:17vw;left:24%;top:17%}.portfolio-word .char-t{--size:18vw;left:42%;top:6%}.portfolio-word .char-f{--size:15vw;left:60%;top:12%}.portfolio-word .char-o2{--size:16vw;left:70%;top:25%}.portfolio-word .char-l{--size:16vw;left:81%;top:38%}.portfolio-word .char-i{--size:13vw;left:88%;top:55%}.portfolio-word .char-o3{--size:14vw;left:91%;top:66%}.portfolio-word sup{left:70%;top:7%;font-size:6vw}
+  .badge-container{animation-name:badgeEntranceSwingMobile}.badge-container:hover{animation-name:badgeHoverSwingMobile}
+}
+@keyframes badgeEntranceSwingMobile{0%{transform:rotate(25deg)}20%{transform:rotate(-18deg)}40%{transform:rotate(12deg)}60%{transform:rotate(-6deg)}80%{transform:rotate(2deg)}100%{transform:rotate(0deg)}}
+@keyframes badgeHoverSwingMobile{0%{transform:rotate(-3deg)}100%{transform:rotate(3deg)}}
+
+/* P4-accurate compact arc: the lettering stays close to the portrait. */
+@media(min-width:851px){
+  .portfolio-word{inset:auto;top:58px;left:50%;width:min(800px,72vw);height:455px;transform:translateX(-50%)}
+  .portfolio-word .char-p{--size:142px;--rotation:-13deg;left:2%;top:42%}
+  .portfolio-word .char-o1{--size:94px;--rotation:14deg;left:18%;top:70%}
+  .portfolio-word .char-r{--size:126px;--rotation:-6deg;left:28%;top:22%}
+  .portfolio-word .char-t{--size:146px;--rotation:0deg;left:44%;top:2%}
+  .portfolio-word .char-f{--size:116px;--rotation:8deg;left:61%;top:18%}
+  .portfolio-word .char-o2{--size:122px;--rotation:10deg;left:72%;top:35%}
+  .portfolio-word .char-l{--size:96px;--rotation:2deg;left:83%;top:44%}
+  .portfolio-word .char-i{--size:62px;--rotation:10deg;left:92%;top:56%}
+  .portfolio-word .char-o3{--size:76px;--rotation:14deg;left:101%;top:66%}
+  .portfolio-word sup{left:68%;top:12%;font-size:38px}
+  .opening-sketch{top:94px;width:286px;height:356px;mix-blend-mode:normal}
+}
+
+/* Projects use the same horizontal card-rail language as Wins. */
+.project-stage{overflow:visible}
+.project-rail{display:flex;grid-template-columns:none;gap:22px;overflow-x:auto;overflow-y:visible;scroll-snap-type:x proximity;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:12px 4px 34px;scrollbar-width:thin;scrollbar-color:rgba(21,37,93,.48) transparent}
+.project-rail::-webkit-scrollbar{height:7px}
+.project-rail::-webkit-scrollbar-track{background:transparent}
+.project-rail::-webkit-scrollbar-thumb{background:rgba(21,37,93,.48);border-radius:999px}
+.project-rail .project-card{display:block;flex:0 0 min(390px,78vw);width:min(390px,78vw);scroll-snap-align:start}
+
+/* Gentle section motion keeps scrolling alive without restoring the old bounce. */
+.motion-ready .page-section{opacity:.58;transform:translateY(26px);transition:opacity .72s ease,transform .82s cubic-bezier(.22,1,.36,1)}
+.motion-ready .page-section.section-in-view{opacity:1;transform:translateY(0)}
+.motion-ready .page-section.section-in-view>.section-heading{animation:sectionHeadingDrift .8s cubic-bezier(.22,1,.36,1) both}
+@keyframes sectionHeadingDrift{from{opacity:.45;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+@media(max-width:850px){
+  .project-rail{display:flex;margin-inline:-24px;padding-inline:24px}
+  .project-rail .project-card{display:block;flex-basis:min(360px,84vw);width:min(360px,84vw)}
+  .portfolio-word .char-l{left:77%;top:38%}.portfolio-word .char-i{left:84%;top:54%}.portfolio-word .char-o3{--size:11vw;left:86%;top:66%}
+}
+
+/* Keep the original restrained ID motion; no large entrance swing. */
+.badge-container{transform-origin:top center;animation:badgeGentleSwing 5.2s ease-in-out infinite}
+.badge-container:hover{animation:badgeGentleHover 1.8s ease-in-out infinite alternate}
+@keyframes badgeGentleSwing{0%,100%{transform:translateY(-50px) rotate(-.65deg)}50%{transform:translateY(-52px) rotate(.65deg)}}
+@keyframes badgeGentleHover{from{transform:translateY(-50px) rotate(-1.4deg)}to{transform:translateY(-50px) rotate(1.4deg)}}
+@media(max-width:850px){
+  .badge-container{animation-name:badgeGentleSwingMobile}
+  .badge-container:hover{animation-name:badgeGentleHoverMobile}
+}
+@keyframes badgeGentleSwingMobile{0%,100%{transform:rotate(-.65deg)}50%{transform:translateY(-2px) rotate(.65deg)}}
+@keyframes badgeGentleHoverMobile{from{transform:rotate(-1.4deg)}to{transform:rotate(1.4deg)}}
+
+/* Simplified profile masthead and interactive interests. */
+.profile-line{position:absolute;z-index:4;top:42px;left:50%;transform:translateX(-50%);font:800 clamp(14px,1.35vw,21px) "Libre Franklin";letter-spacing:.14em;white-space:nowrap;color:var(--ink)}
+.language-toggle{position:fixed;z-index:44;top:20px;right:4vw;display:flex;align-items:center;gap:6px;border:1px solid rgba(21,37,93,.22);border-radius:999px;padding:8px 12px;background:rgba(248,250,255,.78);backdrop-filter:blur(16px);color:#7a84a2;font-size:10px;font-weight:800;letter-spacing:.08em;box-shadow:0 8px 24px rgba(35,49,91,.1)}.language-toggle span{transition:color .2s,transform .2s}.language-toggle span.active{color:var(--ink);transform:translateY(-1px)}.language-toggle i{font-style:normal;opacity:.4}.language-toggle:hover{background:#fff}
+.hero-tag-cloud{position:absolute;z-index:4;top:88px;left:50%;transform:translateX(-50%);display:flex;gap:10px;align-items:center;justify-content:center}
+.hero-tag-cloud button{--tag-delay:0ms;border:1px solid rgba(21,37,93,.3);border-radius:999px;background:rgba(247,249,255,.7);color:var(--ink);padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.06em;box-shadow:0 7px 18px rgba(21,37,93,.08);animation:tagFloat 3.2s ease-in-out var(--tag-delay) infinite;transition:background .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease}
+.hero-tag-cloud button:hover{animation-play-state:paused;transform:translateY(-6px) rotate(-2deg) scale(1.08);box-shadow:0 12px 25px rgba(21,37,93,.18)}
+.hero-tag-cloud button.active{background:var(--ink);color:#fff;box-shadow:0 11px 28px rgba(21,37,93,.25)}
+@keyframes tagFloat{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@media(min-width:851px){.opening-sketch{top:128px;width:300px;height:370px}}
+
+/* Seven curated project case studies. */
+.project-card>img{height:250px;object-fit:contain;background:#f7f4ef;padding:10px}
+.project-card>div:last-child{display:flex;flex-direction:column;min-height:390px}
+.project-card h4{font-size:13px;line-height:1.4;color:#3566d6;margin:0 0 14px}
+.project-card p{-webkit-line-clamp:4;margin:0 0 18px}
+.project-card b{margin-top:auto}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin:2px 0 20px}
+.project-tags span{display:inline-flex;border:1px solid rgba(21,37,93,.2);border-radius:999px;padding:5px 8px;background:rgba(255,255,255,.55);font-size:9px!important;line-height:1.2;letter-spacing:.03em!important;text-transform:none!important;color:#536185}
+.modal>img{object-fit:contain;background:#f7f4ef;padding:24px}
+.modal-subtitle{font-weight:700;color:#3566d6!important;margin:0 0 18px}
+.modal-tags{margin-top:24px}
+
+@media(max-width:850px){
+  .language-toggle{top:18px;right:18px;padding:7px 9px;font-size:9px}
+  .hero{padding-top:462px}
+  .profile-line{top:58px;font-size:10px;letter-spacing:.075em}
+  .hero-tag-cloud{top:87px;width:100%;gap:6px;padding:0 12px}
+  .hero-tag-cloud button{padding:6px 9px;font-size:9px}
+  .opening-sketch{top:116px}
+  .project-card>div:last-child{min-height:0}
+}
+
+@media(max-width:560px){
+  .hero{padding-top:448px}
+  .profile-line{top:56px;max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis}
+  .hero-tag-cloud{top:84px}
+  .opening-sketch{top:112px}
+}
+
+/* Final project-image rhythm and live contact form states. */
+.project-card>img{height:280px;object-fit:contain;object-position:center;background:#f7f4ef;padding:18px}
+.contact form button:disabled{opacity:.62;cursor:wait}
+.honey-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}
+.error-toast{background:#8a2941}
+@media(max-width:560px){.project-card>img{height:250px}}
+
+/* Labeled social contacts: icon first, account second. */
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.socials>a,.socials>.social-contact{min-width:44px;height:44px;display:flex;align-items:center;justify-content:center;gap:8px;border:2px solid var(--ink);border-radius:9px;padding:0 11px;text-decoration:none;transition:.2s}
+.socials>a:not(.social-contact){width:44px;padding:0}
+.socials svg{width:20px;height:20px;flex:none}
+.socials .social-contact span{font-size:11px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.socials>a:hover{background:var(--ink);color:white;transform:translateY(-3px)}
+.socials>.social-contact{width:max-content!important;min-width:max-content!important;display:inline-flex!important;flex:0 0 auto;flex-direction:row;white-space:nowrap;overflow:visible}
+.socials>.social-contact svg{position:static!important;display:block!important;flex:0 0 20px;margin:0!important;transform:none!important}
